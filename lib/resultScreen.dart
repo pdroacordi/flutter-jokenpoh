@@ -107,31 +107,28 @@ class ResultScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 32),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 200,
-                height: 48,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            MyHomePage(title: "Pedra, Papel e Tesoura"),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                  child: Text(
-                    "Jogar Novamente",
-                    style: TextStyle(color: Colors.white),
-                  ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 32.0),
+            child: SizedBox(
+              width: 200,
+              height: 48,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          MyHomePage(title: "Pedra, Papel e Tesoura"),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                child: Text(
+                  "Jogar Novamente",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),
